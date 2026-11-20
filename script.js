@@ -3,7 +3,7 @@ var goal;
 var current_progress = 0;
 var lastButtonPushed;
 var lastActionGoal;
-var countdown = 10;
+var countdown = 30;
 var hackNumber = 1;
 
 const hack1Goal = 340;
@@ -108,7 +108,7 @@ function increaseDangerLevel(){
         }, 1000);
     }
 
-    if(current_danger === 100){
+    if(current_danger === 100 && hackNumber !== 4){
         window.location.href = 'timeout' + hackNumber + '.html';
     }
 }
