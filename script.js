@@ -6,9 +6,9 @@ var lastActionGoal;
 var countdown = 30;
 var hackNumber = 1;
 
-const hack1Goal = 340;
-const hack2Goal = 740;
-const hack3Goal = 570;
+const hack1Goal = 240;
+const hack2Goal = 405;
+const hack3Goal = 160;
 
 document.addEventListener('keypress', function(event){
     if(event.key == "`"){
@@ -51,14 +51,14 @@ function setGoal(hack) {
     hackNumber = hack;
 
     if(hackNumber === 2){
-        moveProgress(1050);
+        moveProgress(635);
     }
 }
 
 function moveProgress(amt, event) {
     current_progress = current_progress + amt;
     if(current_progress < 0) current_progress = 0;
-    else if(current_progress > 1050) current_progress = 1050;
+    else if(current_progress > 635) current_progress = 635;
     document.getElementById("progress-icon").style.transform = "translateX(" + current_progress + "px) rotate(180deg)";
 
     if(event !== null){
@@ -66,6 +66,8 @@ function moveProgress(amt, event) {
         checkForWin(current_progress, lastButtonPushed);
         increaseDangerLevel();
     }
+
+    console.log(current_progress);
 }
 
 function checkForWin(current_progress){
@@ -136,3 +138,4 @@ function startCountdown(hack){
         document.getElementById('timer').innerHTML = countdown;
     }, 1000);
 }
+
