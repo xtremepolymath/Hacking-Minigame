@@ -9,11 +9,9 @@ body {
     flex-direction: column;
     color: lime;
     font-family: monospace;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    width: 1800px;
-    height: 800px;
+    width: 95vw;
+    height: 95vh;
 }
 
 button {
@@ -21,12 +19,15 @@ button {
     color: lime;
     background: none;
     border: solid 1px gainsboro;
+    padding: 0.5rem;
 }
 
 .front-page {
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 0rem 1rem;
+    line-height: 1rem;
 }
 
 .alien-script {
@@ -34,21 +35,33 @@ button {
 }
 
 .start {
-    width: 400px;
-    padding: 10px;
-    font-size: 3rem;
+    width: 50%;
+    padding: 1rem;
+    font-size: 2rem;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 0.5rem;
     font-family: monospace;
     color: lime;
     background: none;
     border: solid 1px gainsboro;
 }
 
+.start:active {
+    background: lime;
+    color: gainsboro;
+}
+
+.hack {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
 .redOverlay {
     position: fixed;
-    height: 2000px;
-    width: 2000px;
+    height: 100vh;
+    width: 100vw;
     background: red;
     z-index: -1;
     opacity: 0;
@@ -56,37 +69,30 @@ button {
 }
 
 .hack-title {
-    width: 100%;
+    font-size: 1.2rem;
     color:yellow;
     text-align: left;
-    padding: 10px 60px;
-}
-
-#first-hack {
-    display: flex;
-    width: 100%;
-    flex-direction: column; 
+    padding: 0.5rem 1rem;
 }
 
 .danger-level {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100px;
-    padding: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: -1rem;
 }
 
 .danger-frame {
-    height: 100%;
-    width: 1200px;
+    width: 75%;
     border: solid 1px gainsboro;
 }
 
 .danger-fill {
-    height: 100%;
+    flex: 1 100%;
+    height: 30px;
     width: 0%;
     background-color: red;
 }
@@ -106,13 +112,13 @@ button {
 
 .hack-progress > div {
     top: 20px;
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 
 .progress-icon {
     position: absolute;
-    height: 30px;
-    width:30px;
+    height: 15px;
+    width:20px;
     left: 15px;
     top: -5px;
     transform: rotate(180deg);
@@ -120,21 +126,35 @@ button {
 
 .goal-icon {
     position: absolute;
-    height: 30px;
-    width:30px;
+    height: 15px;
+    width:20px;
     left: 15px;
     top: 40px;
 }
 
 .hack-progress > p {
-    margin-top: 100px;
-    font-size: 1.2rem;
+    margin-top: 2em;
+    font-size: 1rem;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;   
 }
 
 .actions > button {
-    height: 80px;
+    height: 50px;
     width: 150px;
-    font-size: 1.5rem;
+    font-size: 0.75rem;
+}
+
+.actions > button:active {
+    background: lime;
+    color: gainsboro;
 }
 
 .navigation > button {
